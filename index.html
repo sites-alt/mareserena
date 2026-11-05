@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hotel Aurora — conforto, tranquilidade e experiências inesquecíveis.">
+  <title>MARÉ SERENA HOTEL | ONDE O TEMPO DESACELERA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="#inicio"><span class="logo-mark">MS</span><span>MARÉ <b>SERENA</b></span></a>
+    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav class="nav">
+      <a href="#inicio">Início</a>
+      <a href="#acomodacoes">Acomodações</a>
+      <a href="#experiencias">Experiências</a>
+      <a href="#sobre">O hotel</a>
+      <a class="nav-cta" href="#reservar">Reservar agora</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="eyebrow light">Desacelere. Você chegou.</span>
+        <h1>ONDE O TEMPO<br><em>DESACELERA.</em></h1>
+        <p>Um refúgio à beira-mar para quem busca tranquilidade, conforto e experiências inesquecíveis. 
+          Descubra o equilíbrio perfeito entre natureza, lazer e hospitalidade.</p>
+        <a class="button button-light" href="#acomodacoes">Conheça o hotel <span>→</span></a>
+      </div>
+      <div class="hero-note">LITORAL NORTE · SÃO PAULO</div>
+    </section>
+
+    <section class="booking-wrap" id="reservar">
+      <form class="booking" id="booking-form">
+        <label><span>CHECK-IN</span><input type="date" id="checkin" required></label>
+        <label><span>CHECK-OUT</span><input type="date" id="checkout" required></label>
+        <label><span>HÓSPEDES</span><select id="guests"><option>1 hóspede</option><option selected>2 hóspedes</option><option>3 hóspedes</option><option>4 hóspedes</option></select></label>
+        <button class="button button-dark" type="submit">Consultar disponibilidade <span>→</span></button>
+      </form>
+    </section>
+
+
+<!-- ========================================
+     ACOMODAÇÕES
+======================================== -->
+
+<section class="rooms section" id="acomodacoes">
+
+    <div class="section-heading">
+
+        <div>
+            <span class="eyebrow">ACOMODAÇÕES</span>
+
+            <h2>
+                Seu espaço de <em>tranquilidade.</em>
+            </h2>
+        </div>
+
+        <p>
+            Ambientes acolhedores, pensados para transformar
+            sua estadia em uma lembrança especial.
+        </p>
+
+    </div>
+
+
+    <div class="room-grid">
+
+        <!-- SUÍTE LUXO -->
+
+        <article class="room-card">
+
+            <div class="room-image">
+                <img src="images/luxo.jpeg" alt="Suíte Luxo">
+
+                <span class="room-number">01</span>
+            </div>
+
+            <div class="room-info">
+                <div>
+                    <span class="room-type">CONFORTO E SOFISTICAÇÃO</span>
+                    <h3>Suíte Luxo</h3>
+                </div>
+
+                <span class="room-arrow">↗</span>
+            </div>
+
+            <p>
+                Cama king, cabeceira verde-escuro, varanda com
+                vista para o mar e banheira de hidromassagem.
+            </p>
+
+        </article>
+
+
+        <!-- DEMI-SUÍTE -->
+
+        <article class="room-card">
+
+            <div class="room-image">
+                <img src="images/demi.jpeg" alt="Demi-Suíte">
+
+                <span class="room-number">02</span>
+            </div>
+
+            <div class="room-info">
+                <div>
+                    <span class="room-type">PRATICIDADE E CONFORTO</span>
+                    <h3>Demi-Suíte</h3>
+                </div>
+
+                <span class="room-arrow">↗</span>
+            </div>
+
+            <p>
+                Cama queen, sofá, mesa de trabalho e cozinha
+                compacta. Perfeita para quem deseja ficar mais tempo.
+            </p>
+
+        </article>
+
+
+        <!-- SUÍTE ACESSÍVEL -->
+
+        <article class="room-card">
+
+            <div class="room-image">
+                <img src="images/acessivel.jpeg" alt="Suíte Acessível">
+
+                <span class="room-number">03</span>
+            </div>
+
+            <div class="room-info">
+                <div>
+                    <span class="room-type">ACESSIBILIDADE</span>
+                    <h3>Suíte Acessível</h3>
+                </div>
+
+                <span class="room-arrow">↗</span>
+            </div>
+
+            <p>
+                Quarto amplo, cama baixa, barras de apoio,
+                chuveiro com cadeira e espaço para circulação
+                de cadeiras de rodas.
+            </p>
+
+        </article>
+
+
+        <!-- SUÍTE SIMPLES -->
+
+        <article class="room-card">
+
+            <div class="room-image">
+                <img src="images/simples.jpeg" alt="Suíte Simples">
+
+                <span class="room-number">04</span>
+            </div>
+
+            <div class="room-info">
+                <div>
+                    <span class="room-type">ACONCHEGO E SIMPLICIDADE</span>
+                    <h3>Suíte Simples</h3>
+                </div>
+
+                <span class="room-arrow">↗</span>
+            </div>
+
+            <p>
+                Aconchegante, com cama de casal, TV,
+                ar-condicionado e banheiro privativo.
+                Ideal para quem busca conforto e praticidade.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+    
+<section class="experiences" id="experiencias">
+
+    <div class="experiences-heading">
+        <span class="eyebrow">VIVA MOMENTOS INESQUECÍVEIS</span>
+
+        <h2>
+            Nossas <em>experiências</em>
+        </h2>
+
+        <p>
+            No Maré Serena, cada hóspede encontra uma maneira especial
+            de aproveitar sua estadia. Escolha a experiência ideal para você.
+        </p>
+    </div>
+
+    <div class="experiences-grid">
+
+        <article class="experience-card">
+            <div class="experience-icon">☀</div>
+
+            <span class="experience-number">01</span>
+
+            <h3>Experiência Praiana</h3>
+
+            <p>
+                Momentos de descanso, lazer e contato com o mar,
+                com passeios e comodidades para aproveitar o litoral.
+            </p>
+        </article>
+
+        <article class="experience-card">
+            <div class="experience-icon">🌿</div>
+
+            <span class="experience-number">02</span>
+
+            <h3>Experiência Aventura</h3>
+
+            <p>
+                Trilhas, cachoeiras, passeios ecológicos e atividades
+                para quem gosta de explorar a natureza.
+            </p>
+        </article>
+
+        <article class="experience-card">
+            <div class="experience-icon">♡</div>
+
+            <span class="experience-number">03</span>
+
+            <h3>Experiência Romântica</h3>
+
+            <p>
+                Decorações especiais, jantares a dois e surpresas
+                personalizadas para celebrar momentos especiais.
+            </p>
+        </article>
+
+        <article class="experience-card">
+            <div class="experience-icon">✧</div>
+
+            <span class="experience-number">04</span>
+
+            <h3>Experiência Personalizada</h3>
+
+            <p>
+                Uma combinação de serviços, passeios e atividades
+                escolhidos de acordo com as preferências de cada hóspede.
+            </p>
+        </article>
+
+    </div>
+
+</section>
+
+
+    <section class="quote section">
+      <span class="eyebrow">SUA PRÓXIMA VIAGEM COMEÇA AQUI</span>
+      <h2>“O melhor da viagem é<br><em>ter vontade de voltar.”</em></h2>
+      <a class="button button-dark" href="#reservar">Faça sua reserva <span>→</span></a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div><a class="logo footer-logo" href="#inicio"><span class="logo-mark">MS</span><span>MARÉ<b>SERENA</b></span></a><p>Seu refúgio de conforto e tranquilidade.</p></div>
+    <div class="footer-links"><a href="#acomodacoes">Acomodações</a><a href="#experiencias">Experiências</a><a href="#sobre">Sobre o hotel</a><a href="mailto:reservas@mareserena.com.br">reservas@mareserena.com.br</a></div>
+    <small>© <span id="year"></span> MARÉ SERENA. </small>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>

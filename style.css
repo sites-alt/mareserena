@@ -1,0 +1,862 @@
+
+/* ========================================
+   1. CONFIGURAÇÕES GERAIS
+======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: #25332e;
+    background: #faf9f6;
+    font-family: 'DM Sans', sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* ========================================
+   2. CABEÇALHO E NAVEGAÇÃO
+======================================== */
+
+.header {
+    height: 84px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #faf9f6;
+    position: relative;
+    z-index: 5;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #33443b;
+}
+
+.logo b {
+    font-weight: 700;
+}
+
+.logo-mark {
+    width: 34px;
+    height: 34px;
+    border: 1px solid #b18c5b;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: #b18c5b;
+    font: 600 21px 'Playfair Display', serif;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    font-size: 12px;
+    color: #526057;
+}
+
+.nav a:hover,
+.text-link:hover {
+    color: #ad8959;
+}
+
+.nav .nav-cta {
+    background: #30443a;
+    color: white;
+    padding: 14px 21px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: 0;
+    font-size: 24px;
+    color: #30443a;
+}
+
+
+/* ========================================
+   3. BANNER PRINCIPAL
+======================================== */
+
+.hero {
+    height: 650px;
+    min-height: 560px;
+    position: relative;
+    background: url('./images/inicio.jpeg') center 48% / cover;
+    display: flex;
+    align-items: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(16, 32, 26, 0.72),
+        rgba(16, 32, 26, 0.12)
+    );
+}
+
+.hero-content {
+    position: relative;
+    color: white;
+    margin-left: 12%;
+    max-width: 590px;
+}
+
+.eyebrow {
+    font-size: 10px;
+    letter-spacing: 2.4px;
+    color: #a17d4e;
+    font-weight: 700;
+}
+
+.eyebrow.light {
+    color: #dfc59f;
+}
+
+.hero h1,
+.intro h2,
+.section-heading h2,
+.experiences-heading h2,
+.quote h2 {
+    font: 500 clamp(42px, 6vw, 76px) / 1.08 'Playfair Display', serif;
+    letter-spacing: -1.5px;
+    margin: 24px 0;
+}
+
+.hero h1 em,
+.intro h2 em,
+.section-heading h2 em,
+.experiences-heading h2 em,
+.quote h2 em {
+    font-weight: 500;
+    color: #d7bd98;
+}
+
+.hero-content p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #e8e9e5;
+    max-width: 410px;
+    margin-bottom: 32px;
+}
+
+.hero-note {
+    position: absolute;
+    right: 7%;
+    bottom: 32px;
+    color: #fff;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+
+/* ========================================
+   4. BOTÕES
+======================================== */
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    padding: 17px 22px;
+    border: 0;
+    font: 600 11px 'DM Sans', sans-serif;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.button span {
+    font-size: 18px;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.button-light {
+    background: #f8f6f0;
+    color: #30443a;
+}
+
+.button-dark {
+    background: #30443a;
+    color: #fff;
+}
+
+
+/* ========================================
+   5. FORMULÁRIO DE RESERVAS
+======================================== */
+
+.booking-wrap {
+    padding: 0 7%;
+    position: relative;
+    margin-top: -1px;
+}
+
+.booking {
+    background: #fff;
+    box-shadow: 0 12px 40px #24362b13;
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.8fr 1.4fr;
+    align-items: center;
+    padding: 22px 28px;
+    gap: 20px;
+}
+
+.booking label {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    border-right: 1px solid #e8e7e1;
+    padding-right: 15px;
+}
+
+.booking label span {
+    font-size: 9px;
+    letter-spacing: 1.6px;
+    color: #9b805d;
+    font-weight: 700;
+}
+
+.booking input,
+.booking select {
+    border: 0;
+    background: transparent;
+    color: #38483f;
+    font: 13px 'DM Sans', sans-serif;
+    outline: none;
+    width: 100%;
+}
+
+.booking .button {
+    width: 100%;
+}
+
+
+/* ========================================
+   6. SEÇÕES GERAIS
+======================================== */
+
+.section {
+    padding: 110px 10%;
+}
+
+
+/* ========================================
+   7. APRESENTAÇÃO DO HOTEL
+======================================== */
+
+.intro {
+    display: grid;
+    grid-template-columns: 1.05fr 0.85fr;
+    gap: 10%;
+    align-items: center;
+}
+
+.intro-image {
+    height: 490px;
+    overflow: hidden;
+}
+
+.intro-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.intro-copy h2,
+.section-heading h2 {
+    font-size: 54px;
+    color: #30443a;
+}
+
+.intro-copy h2 em,
+.section-heading h2 em {
+    color: #a78356;
+}
+
+.intro-copy p,
+.section-heading > p {
+    font-size: 13px;
+    line-height: 2;
+    color: #7b827c;
+}
+
+.intro-copy p {
+    max-width: 420px;
+    margin-bottom: 28px;
+}
+
+.text-link {
+    font-size: 11px;
+    font-weight: 700;
+    border-bottom: 1px solid #b18c5b;
+    padding-bottom: 9px;
+}
+
+.text-link span {
+    margin-left: 15px;
+    color: #a78356;
+}
+
+
+/* ========================================
+   8. ACOMODAÇÕES
+======================================== */
+
+.rooms {
+    background: #f0f0e9;
+    padding-top: 100px;
+    padding-bottom: 115px;
+}
+
+/* Cabeçalho */
+
+.section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-size: 47px;
+    margin: 18px 0 0;
+}
+
+.section-heading > p {
+    max-width: 300px;
+    margin-bottom: 5px;
+}
+
+/* Grade de acomodações */
+
+.room-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/* Cards */
+
+.room-card {
+    background: #faf9f6;
+    padding-bottom: 24px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.room-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px #24362b15;
+}
+
+/* Imagens */
+
+.room-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.room-card:hover img {
+    transform: scale(1.04);
+}
+
+/* Informações */
+
+.room-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 25px 0;
+}
+
+.room-info h3 {
+    font: 500 26px 'Playfair Display', serif;
+    margin: 8px 0;
+    color: #30443a;
+}
+
+.room-arrow {
+    font-size: 23px;
+    color: #a17d4e;
+    transition: 0.3s ease;
+}
+
+.room-card:hover .room-arrow {
+    transform: translate(3px, -3px);
+}
+
+/* Descrições */
+
+.room-card p {
+    padding: 0 25px;
+    margin: 8px 0 0;
+    font-size: 12px;
+    line-height: 1.9;
+    color: #7b827c;
+}
+
+
+/* ========================================
+   9. NOSSAS EXPERIÊNCIAS
+======================================== */
+
+.experiences {
+    padding: 110px 10%;
+    background: #f0f0e9;
+}
+
+.experiences-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 55px;
+}
+
+.experiences-heading h2 {
+    font: 500 48px 'Playfair Display', serif;
+    color: #30443a;
+    margin: 20px 0;
+}
+
+.experiences-heading h2 em {
+    color: #a78356;
+    font-weight: 500;
+}
+
+.experiences-heading p {
+    color: #7b827c;
+    font-size: 13px;
+    line-height: 2;
+}
+
+.experiences-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.experience-card {
+    position: relative;
+    background: #faf9f6;
+    padding: 35px 25px;
+    min-height: 290px;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-8px);
+    border-bottom-color: #b18c5b;
+    box-shadow: 0 15px 35px #24362b12;
+}
+
+.experience-icon {
+    font-size: 30px;
+    color: #a78356;
+    margin-bottom: 25px;
+}
+
+.experience-number {
+    position: absolute;
+    top: 35px;
+    right: 25px;
+    font-size: 11px;
+    color: #b18c5b;
+    letter-spacing: 2px;
+}
+
+.experience-card h3 {
+    font: 500 22px 'Playfair Display', serif;
+    color: #30443a;
+    margin-bottom: 15px;
+}
+
+.experience-card p {
+    font-size: 12px;
+    line-height: 1.9;
+    color: #7b827c;
+    margin: 0;
+}
+
+
+/* ========================================
+   10. FRASE DE DESTAQUE
+======================================== */
+
+.quote {
+    text-align: center;
+    padding-top: 105px;
+    padding-bottom: 110px;
+}
+
+.quote h2 {
+    font-size: 50px;
+    color: #30443a;
+    margin: 22px 0 30px;
+}
+
+.quote h2 em {
+    color: #a78356;
+}
+
+
+/* ========================================
+   11. RODAPÉ
+======================================== */
+
+.footer {
+    background: #202f28;
+    color: #e8e9e5;
+    padding: 55px 10% 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+}
+
+.footer-logo {
+    color: white;
+}
+
+.footer p {
+    font-size: 11px;
+    color: #aeb9b0;
+    margin-top: 18px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 22px;
+    flex-wrap: wrap;
+    font-size: 10px;
+    color: #cbd1cb;
+    align-content: start;
+}
+
+.footer small {
+    grid-column: 1 / -1;
+    border-top: 1px solid #ffffff20;
+    padding-top: 20px;
+    color: #89988e;
+    font-size: 9px;
+}
+
+
+/* ========================================
+   12. MENSAGEM DE NOTIFICAÇÃO
+======================================== */
+
+.toast {
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translate(-50%, 20px);
+    background: #253a30;
+    color: white;
+    padding: 15px 22px;
+    font-size: 12px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.25s;
+    z-index: 10;
+    box-shadow: 0 8px 25px #0002;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+
+/* ========================================
+   13. RESPONSIVIDADE - TABLETS
+======================================== */
+
+@media (max-width: 800px) {
+
+    /* Cabeçalho */
+
+    .header {
+        height: 72px;
+        padding: 0 6%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: #faf9f6;
+        padding: 20px 6% 25px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+        box-shadow: 0 15px 20px #0001;
+    }
+
+    .nav.open {
+        display: flex;
+    }
+
+    .nav .nav-cta {
+        text-align: center;
+    }
+
+    /* Banner */
+
+    .hero {
+        height: 590px;
+    }
+
+    .hero-content {
+        margin: 0 8%;
+    }
+
+    /* Reservas */
+
+    .booking {
+        grid-template-columns: 1fr 1fr;
+        padding: 22px;
+        gap: 20px;
+    }
+
+    .booking label:nth-child(2) {
+        border: 0;
+    }
+
+    .booking .button {
+        grid-column: 1 / -1;
+    }
+
+    /* Seções */
+
+    .section {
+        padding: 75px 7%;
+    }
+
+    /* Apresentação */
+
+    .intro {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .intro-image {
+        height: 360px;
+    }
+
+    .intro-copy h2,
+    .section-heading h2 {
+        font-size: 43px;
+    }
+
+    /* Acomodações */
+
+    .section-heading {
+        display: block;
+    }
+
+    .section-heading > p {
+        margin-top: 18px;
+    }
+
+    .room-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .room-card img {
+        height: 230px;
+    }
+
+    /* Experiências */
+
+    .experiences {
+        padding: 75px 7%;
+    }
+
+    .experiences-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Rodapé */
+
+    .footer {
+        padding: 45px 7%;
+    }
+}
+
+
+/* ========================================
+   14. RESPONSIVIDADE - CELULARES
+======================================== */
+
+@media (max-width: 520px) {
+
+    /* Banner */
+
+    .hero {
+        height: 560px;
+        min-height: 0;
+        background-position: 58% center;
+    }
+
+    .hero h1 {
+        font-size: 53px;
+    }
+
+    .hero-content p {
+        font-size: 13px;
+    }
+
+    /* Reservas */
+
+    .booking-wrap {
+        padding: 0 5%;
+    }
+
+    .booking {
+        grid-template-columns: 1fr 1fr;
+        padding: 18px 15px;
+        gap: 16px;
+    }
+
+    .booking label {
+        min-width: 0;
+    }
+
+    .booking input {
+        font-size: 11px;
+    }
+
+    .booking .button {
+        font-size: 10px;
+        padding: 16px 13px;
+    }
+
+    /* Seções */
+
+    .section {
+        padding: 65px 6%;
+    }
+
+    /* Apresentação */
+
+    .intro-image {
+        height: 290px;
+    }
+
+    .intro-copy h2,
+    .section-heading h2 {
+        font-size: 38px;
+    }
+
+    /* Acomodações */
+
+    .rooms {
+        padding-top: 70px;
+        padding-bottom: 75px;
+    }
+
+    .room-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .room-card img {
+        height: 250px;
+    }
+
+    .room-info {
+        padding: 20px 20px 0;
+    }
+
+    .room-info h3 {
+        font-size: 23px;
+    }
+
+    .room-card p {
+        padding: 0 20px;
+    }
+
+    /* Experiências */
+
+    .experiences {
+        padding: 70px 6%;
+    }
+
+    .experiences-heading h2 {
+        font-size: 38px;
+    }
+
+    .experiences-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .experience-card {
+        min-height: auto;
+        padding: 30px 25px;
+    }
+
+    /* Frase de destaque */
+
+    .quote h2 {
+        font-size: 39px;
+    }
+
+    /* Rodapé */
+
+    .footer {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-links {
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .footer small {
+        grid-column: auto;
+    }
+
+    /* Observação do banner */
+
+    .hero-note {
+        font-size: 8px;
+        right: 6%;
+    }
+}
